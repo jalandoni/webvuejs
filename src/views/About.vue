@@ -1,19 +1,28 @@
 <template>
   <div class="about">
-    <dev v-bind:picture = "require('@/assets/princess.png')" v-bind:name="'Princess'"></dev>
-    <dev v-bind:picture = "require('@/assets/lorly.png')" v-bind:name="'Lorly'"></dev>
-    <dev v-bind:picture = "require('@/assets/mellyne.png')" v-bind:name="'Mellyne'"></dev>
-    <dev v-bind:picture = "require('@/assets/jacky.png')" v-bind:name="'Jakeniel'"></dev>
+
+
+      <h1 >Developers</h1>
+ 
+
+    <developer v-bind:picture = "require('../assets/grace.png')" v-bind:name="'Grace'"></developer>
+      
+    <developer v-bind:picture = "require('../assets/jess.jpg')" v-bind:name="'Jessa'"></developer>
+  
+    <developer v-bind:picture = "require('../assets/ivy.png')" v-bind:name="'Ivy'"></developer>
+
+    <developer v-bind:picture= "require('../assets/gen.png')" v-bind:name="'Gen'"></developer>
+  
   </div>
 
 
   </template>
 
 <script>
-import dev from "@/components/developers";
+import developer from "@/components/developersProfile";
 export default {
   components:{
-    dev
+    developer
   }
 };
 </script>
