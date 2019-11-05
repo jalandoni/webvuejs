@@ -1,20 +1,42 @@
 <template>
-  <v-card>
+
     <v-row>
-      <v-col>
-        <img :src="picture" />
+      <v-col cols ='12'>
+        <img  :src="image" rounded="circle" />
+         <p>{{info}}</p>
+         <p>{{des}}</p>
       </v-col>
-      <v-col cols='10' class="text-left">
-        <h1>{{name}}</h1>
+
+      <v-col cols='12'>
+          <h2>{{name}}</h2>
       </v-col>
     </v-row>
-  </v-card>
+
+
 </template>
+
+
+
 <script>
 export default {
   props: {
+    info:String,
+    image: String,
     name: String,
-    picture: String
+    des:String
   }
 };
 </script>
+
+<style>
+p, h2 {
+  color: white;
+}
+
+
+
+
+
+
+
+</style>

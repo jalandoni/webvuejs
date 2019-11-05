@@ -1,21 +1,27 @@
 <template>
   <div class="about">
+    <h1 >Developers</h1>
 
+    <b-container fluid class="p-4 bg-dark">
 
-      <h1 >Developers</h1>
- 
+    <b-row>
 
-    <developer v-bind:picture = "require('../assets/grace.png')" v-bind:name="'Grace'"></developer>
-      
-    <developer v-bind:picture = "require('../assets/jess.jpg')" v-bind:name="'Jessa'"></developer>
-  
-    <developer v-bind:picture = "require('../assets/ivy.png')" v-bind:name="'Ivy'"></developer>
+      <developer v-bind:image = "require('@/assets/grace.png') " 
+      v-bind:info="'Project Manager'" v-bind:des="'A dedicated student'" v-bind:name="'Grace'"></developer>
 
-    <developer v-bind:picture= "require('../assets/gen.png')" v-bind:name="'Gen'"></developer>
-  
+      <developer v-bind:image = "require('@/assets/jess.jpg')" 
+      v-bind:info="'Front-end Developer'" v-bind:des="'A courageous student'"  v-bind:name="'Jessa'"></developer>
+
+      <developer v-bind:image= "require('@/assets/ivy.png')"
+      v-bind:info="'Back-end Developer'" v-bind:des="'A persistent student'"  v-bind:name="'Ivy'"></developer>
+
+      <developer v-bind:image= "require('@/assets/gen.png')"
+      v-bind:info="'Back-end Developer'" v-bind:des="'A hardworking student'" v-bind:name="'Gen'"></developer>
+
+     </b-row>
+
+    </b-container>
   </div>
-
-
   </template>
 
 <script>

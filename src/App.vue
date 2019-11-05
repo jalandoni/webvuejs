@@ -1,44 +1,38 @@
 <template>
-  <v-app>
-    <center>
-    <div id="navigate">
-    <v-app-bar app>
-     <div v-bind:style="styleObject">
-      <router-link to="/" id="home">Home</router-link>  |
-      </div>
-      <router-link to="/about">About</router-link>
-    </v-app-bar>
-</div>
-    <v-content>
-      <router-view/>
-    </v-content>
-    </center>
-  </v-app>
+<center>
+<div id="navigate">
+ <div id="app">
+   <div class="card">
+     <NavBar/>
+   </div>
+   <div class="content">
+     <router-view/>
+     </div>
+ </div>
+ </div>
+ </center>
 </template>
 
 <script>
-
+import NavBar from '@/components/headerBar.vue'
 export default {
-  name: "App",
-  data: () => ({
-    styleObject: {
-    color: 'red',
-
-  }
-  })
-};
-
+ name: 'home',
+ components: {
+   NavBar
+ }
+}
 </script>
 <style>
 
 
-#nav {
-  padding: px;
+
+.card{
+  padding-top:25px;
+  padding-bottom:25px;
 }
 
-hover #navigate {
-  color:yellow;
-}
+
+
 
 #navigate a {
   font-weight: bold;
@@ -49,10 +43,7 @@ hover #navigate {
   color: blue;
 }
 
-/* *{
-      box-sizing:border-box;
-      margin:0;
-  } */
+
 </style>
 
 
