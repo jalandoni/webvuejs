@@ -1,26 +1,39 @@
 <template>
-<center>
-<div id="navigate">
- <div id="app">
-   <div class="card">
-     <NavBar/>
-   </div>
-   <div class="content">
-     <router-view/>
-     </div>
- </div>
- </div>
- </center>
+    <div id="app">
+        <div id="nav">
+            <router-link v-if="authenticated" to="/login" v-on:click.native="logout()" replace>Logout</router-link>
+        </div>
+        <router-view @authenticated="setAuthenticated" />
+    </div>
 </template>
 
 <script>
-import NavBar from '@/components/headerBar.vue'
+
 export default {
- name: 'home',
- components: {
-   NavBar
- }
-}
+        el: 'App',
+        data() {
+            return {
+                authenticated: false,
+                mockAccount: {
+                    username: "admin",
+                    password: "admin"
+                }
+            }
+        },
+        mounted() {
+            if(!this.authenticated) {
+                this.$router.replace({ name: "login" });
+            }
+        },
+        methods: {
+            setAuthenticated(status) {
+                this.authenticated = status;
+            },
+            logout() {
+                this.authenticated = false;
+            }
+        }
+    }
 </script>
 <style>
 
