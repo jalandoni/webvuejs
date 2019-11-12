@@ -6,7 +6,6 @@
          <p>{{info}}</p>
          <p>{{des}}</p>
       </v-col>
-
       <v-col cols='12'>
           <h2>{{name}}</h2>
       </v-col>

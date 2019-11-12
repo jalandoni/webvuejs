@@ -8,7 +8,6 @@
 </template>
 
 <script>
-
 export default {
         el: 'App',
         data() {
